@@ -8,6 +8,15 @@
 	<name>spring-mvc-template</name>
 	<description>mybatis+spring+mapper+pager</description>
 	<properties>
+		 <!--  Java接口和实体类  -->
+        <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
+        <targetMapperPackage>com.xxx.mybatis.mapper</targetMapperPackage>
+        <targetModelPackage>com.xxx.mybatis.model</targetModelPackage>
+        <!--  XML生成路径  -->
+        <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
+        <targetXMLPackage>mapper</targetXMLPackage>
+	
+	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.jdk>1.8</project.build.jdk>
 		<spring.version>4.2.6.RELEASE</spring.version>
