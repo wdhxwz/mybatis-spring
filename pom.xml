@@ -386,7 +386,7 @@
 							<directory>src/main/webapp</directory>
 						</resource>
 					</webResources>
-					<warName>xxx</warName>
+					<warName>wwwccc</warName>
 				</configuration>
 			</plugin>
 			<plugin>
