@@ -23,6 +23,7 @@
 			targetProject="${targetJavaProject}" type="XMLMAPPER" />
 
 		<!-- 配置表 -->
-		<table tableName="B_Bank" domainObjectName="Bank" />
+		<table tableName="film" domainObjectName="Film" />
+		<table tableName="student" domainObjectName="Student" />
 	</context>
 </generatorConfiguration>
