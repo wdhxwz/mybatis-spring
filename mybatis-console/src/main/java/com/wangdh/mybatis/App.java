@@ -1,4 +1,4 @@
-package org.mybatis.console;
+package com.wangdh.mybatis;
 
 /**
  * Hello world!
