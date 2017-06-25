@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wangdh.mybatis.mapper.StudentHealthMaleEntityMapper" >
+  <resultMap id="BaseResultMap" type="com.wangdh.mybatis.mapper.entity.StudentHealthMaleEntity" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="no" property="no" jdbcType="VARCHAR" />
+    <result column="student_id" property="studentId" jdbcType="VARCHAR" />
+    <result column="check_date" property="checkDate" jdbcType="DATE" />
+    <result column="heart" property="heart" jdbcType="VARCHAR" />
+    <result column="liver" property="liver" jdbcType="VARCHAR" />
+    <result column="lung" property="lung" jdbcType="VARCHAR" />
+    <result column="kidney" property="kidney" jdbcType="VARCHAR" />
+    <result column="spleen" property="spleen" jdbcType="VARCHAR" />
+    <result column="prostate" property="prostate" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

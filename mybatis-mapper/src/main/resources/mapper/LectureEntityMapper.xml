@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wangdh.mybatis.mapper.LectureEntityMapper" >
+  <resultMap id="BaseResultMap" type="com.wangdh.mybatis.mapper.entity.LectureEntity" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="lecture_name" property="lectureName" jdbcType="VARCHAR" />
+    <result column="lecture_no" property="lectureNo" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

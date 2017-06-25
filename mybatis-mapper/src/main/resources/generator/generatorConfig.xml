@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<properties resource="jdbc.properties" />
+	<context id="SqlServer" targetRuntime="MyBatis3Simple"
+		defaultModelType="flat">
+		<property name="beginningDelimiter" value="`" />
+		<property name="endingDelimiter" value="`" />
+
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+			<property name="mappers" value="com.wangdh.mybatis.base.MSSQLMapper" />
+		</plugin>
+
+		<jdbcConnection driverClass="${jdbc.driverClassName}"
+			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}">
+		</jdbcConnection>
+		<javaModelGenerator targetPackage="com.wangdh.mybatis.mapper.entity"
+			targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
+		<javaClientGenerator targetPackage="com.wangdh.mybatis.mapper"
+			targetProject="src/main/java" type="XMLMAPPER" />
+
+		<!-- 执行命令：mybatis-generator:generate -->
+		<!-- -->
+		<table tableName="tb_user" domainObjectName="UserEntity">
+			<generatedKey column="id" sqlStatement="SqlServer" />
+		</table>
+		<table tableName="tb_role" domainObjectName="RoleEntity">
+			<generatedKey column="id" sqlStatement="SqlServer" />
+		</table>
+		<table tableName="tb_user_role" domainObjectName="UserRoleEntity">
+		</table>
+
+		<table tableName="tb_lecture" domainObjectName="LectureEntity">
+			<generatedKey column="id" sqlStatement="SqlServer" />
+		</table>
+		<table tableName="tb_student" domainObjectName="StudentEntity">
+			<generatedKey column="id" sqlStatement="SqlServer" />
+		</table>
+		<table tableName="tb_student_card" domainObjectName="StudentCardEntity">
+			<generatedKey column="id" sqlStatement="SqlServer" />
+		</table>
+		<table tableName="tb_student_health_female" domainObjectName="StudentHealthFemaleEntity">
+			<generatedKey column="id" sqlStatement="SqlServer" />
+		</table>
+		<table tableName="tb_student_health_male" domainObjectName="StudentHealthMaleEntity">
+			<generatedKey column="id" sqlStatement="SqlServer" />
+		</table>
+		<table tableName="tb_student_lecture" domainObjectName="StudentLectureEntity">
+			<generatedKey column="id" sqlStatement="SqlServer" />
+		</table>
+
+
+		<!-- 执行命令： mvn mybatis-generator:generate -->
+	</context>
+</generatorConfiguration>

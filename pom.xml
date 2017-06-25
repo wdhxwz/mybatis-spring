@@ -8,5 +8,6 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>mybatis-console</module>
+		<module>mybatis-mapper</module>
 	</modules>
 </project>
