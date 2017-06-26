@@ -16,15 +16,25 @@
 	</properties>
 	<dependencies>
 
-	<dependency>
-		<groupId>com.wangdh</groupId>
-		<artifactId>mybatis-mapper</artifactId>
-		<version>${project.version}</version>
-	</dependency>
+		<dependency>
+			<groupId>com.wangdh</groupId>
+			<artifactId>mybatis-mapper</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.24</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.4</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
-			
+
 		</plugins>
 	</build>
 </project>
