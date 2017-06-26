@@ -12,8 +12,6 @@ import com.wangdh.mybatis.mapper.entity.RoleEntity;
 import com.wangdh.mybatis.mapper.entity.UserEntity;
 import com.wangdh.mybatis.mapper.entity.UserRoleEntity;
 
-import tk.mybatis.mapper.mapperhelper.MapperHelper;
-
 /**
  * Hello world!
  *
@@ -25,11 +23,7 @@ public class App {
 		RoleEntityMapper roleMapper = sqlSession.getMapper(RoleEntityMapper.class);
 		UserRoleEntityMapper userRoleMapper = sqlSession.getMapper(UserRoleEntityMapper.class);
 
-		MapperHelper mapperHelper = new MapperHelper();
-		mapperHelper.registerMapper(UserEntityMapper.class);
-		mapperHelper.registerMapper(RoleEntityMapper.class);
-		mapperHelper.registerMapper(UserRoleEntityMapper.class);
-		mapperHelper.processConfiguration(sqlSession.getConfiguration());
+		MyBatisSqlSessionFactory.configMapper();
 
 		String userId = UUID.randomUUID().toString();
 		String roleId = UUID.randomUUID().toString();

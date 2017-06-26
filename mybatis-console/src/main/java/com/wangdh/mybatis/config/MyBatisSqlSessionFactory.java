@@ -7,6 +7,12 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.wangdh.mybatis.mapper.RoleEntityMapper;
+import com.wangdh.mybatis.mapper.UserEntityMapper;
+import com.wangdh.mybatis.mapper.UserRoleEntityMapper;
+
+import tk.mybatis.mapper.mapperhelper.MapperHelper;
+
 public class MyBatisSqlSessionFactory {
 
 	private static SqlSessionFactory sqlSessionFactory;
@@ -25,7 +31,22 @@ public class MyBatisSqlSessionFactory {
 		return sqlSessionFactory;
 	}
 
+	/**
+	 * 获取数据库连接
+	 * @return SqlSession
+	 */
 	public static SqlSession openSession(){
 		return getSqlSessionFactory().openSession();
+	}
+	
+	/**
+	 * 集成通用mapper
+	 */
+	public static void configMapper(){
+		MapperHelper mapperHelper = new MapperHelper();
+		mapperHelper.registerMapper(UserEntityMapper.class);
+		mapperHelper.registerMapper(RoleEntityMapper.class);
+		mapperHelper.registerMapper(UserRoleEntityMapper.class);
+		mapperHelper.processConfiguration(openSession().getConfiguration());
 	}
 }
