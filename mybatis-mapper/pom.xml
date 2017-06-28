@@ -17,10 +17,11 @@
 		<druid.version>1.0.18</druid.version>
 		<mapper.version>3.3.4</mapper.version>
 		<pagehelper.version>4.1.0</pagehelper.version>
-		<mybatis.version>3.4.1</mybatis.version>
+		<mybatis.version>
+			3.3.0</mybatis.version>
 	</properties>
 	<dependencies>
-<!-- druid -->
+		<!-- druid -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
@@ -47,8 +48,8 @@
 			<version>${mapper.version}</version>
 		</dependency>
 	</dependencies>
-	
-		<build>
+
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.mybatis.generator</groupId>

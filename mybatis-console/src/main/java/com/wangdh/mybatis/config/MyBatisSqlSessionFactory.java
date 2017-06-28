@@ -15,9 +15,11 @@ import tk.mybatis.mapper.mapperhelper.MapperHelper;
 
 public class MyBatisSqlSessionFactory {
 
+	/**
+	 * 数据库连接工厂，全局唯一
+	 */
 	private static SqlSessionFactory sqlSessionFactory;
-
-	public static SqlSessionFactory getSqlSessionFactory() {
+	static{
 		if (sqlSessionFactory == null) {
 			InputStream inputStream;
 			try {
@@ -27,16 +29,14 @@ public class MyBatisSqlSessionFactory {
 				throw new RuntimeException(e.getCause());
 			}
 		}
-
-		return sqlSessionFactory;
 	}
 
 	/**
-	 * 获取数据库连接
+	 * 获取数据库连接(非线程安全)
 	 * @return SqlSession
 	 */
 	public static SqlSession openSession(){
-		return getSqlSessionFactory().openSession();
+		return sqlSessionFactory.openSession();
 	}
 	
 	/**
