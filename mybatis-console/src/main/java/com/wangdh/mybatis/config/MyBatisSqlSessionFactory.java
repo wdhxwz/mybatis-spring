@@ -1,17 +1,15 @@
 package com.wangdh.mybatis.config;
 
-import java.io.InputStream;
-
+import com.wangdh.mybatis.mapper.RoleEntityMapper;
+import com.wangdh.mybatis.mapper.UserEntityMapper;
+import com.wangdh.mybatis.mapper.UserRoleEntityMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
-import com.wangdh.mybatis.mapper.RoleEntityMapper;
-import com.wangdh.mybatis.mapper.UserEntityMapper;
-import com.wangdh.mybatis.mapper.UserRoleEntityMapper;
-
 import tk.mybatis.mapper.mapperhelper.MapperHelper;
+
+import java.io.InputStream;
 
 public class MyBatisSqlSessionFactory {
 

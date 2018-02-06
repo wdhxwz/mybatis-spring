@@ -1,9 +1,5 @@
 package com.wangdh.mybatis;
 
-import java.util.UUID;
-
-import org.apache.ibatis.session.SqlSession;
-
 import com.wangdh.mybatis.config.MyBatisSqlSessionFactory;
 import com.wangdh.mybatis.mapper.RoleEntityMapper;
 import com.wangdh.mybatis.mapper.UserEntityMapper;
@@ -11,6 +7,9 @@ import com.wangdh.mybatis.mapper.UserRoleEntityMapper;
 import com.wangdh.mybatis.mapper.entity.RoleEntity;
 import com.wangdh.mybatis.mapper.entity.UserEntity;
 import com.wangdh.mybatis.mapper.entity.UserRoleEntity;
+import org.apache.ibatis.session.SqlSession;
+
+import java.util.UUID;
 
 /**
  * Hello world!

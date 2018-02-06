@@ -1,6 +1,7 @@
 package com.wangdh.mybatis.mapper.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Table;
 
 @Table(name = "tb_user_role")
 public class UserRoleEntity {

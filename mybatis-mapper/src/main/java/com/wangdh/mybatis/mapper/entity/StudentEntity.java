@@ -1,6 +1,9 @@
 package com.wangdh.mybatis.mapper.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Table(name = "tb_student")
 public class StudentEntity {
