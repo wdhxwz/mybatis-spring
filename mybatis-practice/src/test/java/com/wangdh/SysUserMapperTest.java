@@ -28,6 +28,15 @@ public class SysUserMapperTest extends BaseMapperTest{
         try(SqlSession sqlSession = getSqlSession()){
             SysUserMapper sysUserMapper = sqlSession.getMapper(SysUserMapper.class);
             SysUser sysUser = sysUserMapper.selectById(1L);
+
+            //
+            sysUser.setUserName("new Name");
+            System.out.println(sysUser.toString());
+
+            // newUser与sysUser是同一个值，并且userName也为new Name
+            SysUser newUser = sysUserMapper.selectById(1L);
+            System.out.println(newUser.toString());
+
             Assert.assertNotNull(sysUser);
             Assert.assertEquals("admin",sysUser.getUserName());
 
